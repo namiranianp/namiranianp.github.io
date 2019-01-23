@@ -1,14 +1,62 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 	<title>Pedram Namiranian</title>
+
+	<style type="text/css">
+	h2 {
+		margin-bottom: 0px;
+	}
+
+	p {
+		margin-top: 5px;
+		margin-left: 30px;
+	}
+
+	a {
+		text-decoration: none;
+		color: blue;
+	}
+
+	a:hover {
+		color: purple;
+	}
+
+	li {
+		margin-top: 30px;
+	}
+
+	li embed {
+		overflow: auto; 
+		border: inset 2px; 
+		margin-top: 10px;
+	}
+</style>
 </head>
-<body>
+<body style="background-color: lightgrey;">
 	<div style="max-width: 1000px; margin-left: 15px;">
-		<h1>Welcome to my github page</h1>
+		<h1>Welcome to my github page!</h1>
 
-		<h2>About Me:</h2>
-		<p>I am currently a computer science major and a philosophy minor at the University of San Francisco. I am very passionate about computer science and love working on various projects and improving my skills. This github repository is a collection of various projects I have worked on and am currently working on. Some of these projects are class assignments and some are created by me just for my own benefit.</p>
+		<div>
+			<h2>About Me:</h2>
+			<p>I am currently a computer science major and a philosophy minor at the University of San Francisco. I am very passionate about computer science and love working on various projects and improving my skills. This github repository is a collection of various projects I have worked on and am currently working on. Some of these projects are class assignments and some are created by me just for my own benefit.</p>
 
-		<h2>Projects Available to View:</h2>
+			<h2>Projects Available to View:</h2>
+			<ul style="list-style-type: disc; font-size: 25px;">
+				<li>
+					<a href="https://github.com/namiranianp/Browser">FileExplorer WebApp</a><br>
+					<embed src="text.txt" height="100px" width="50%">
+				</li>
+				<li>
+					<a href="https://github.com/namiranianp/Scripts">Collection of Bash Scripts</a><br>
+					<embed src="text.txt" height="100px" width="50%">
+				</li>
+				<li>
+					<a href="https://github.com/namiranianp/Hermod">Covert Communication Over ICMP</a><br>
+					<embed src="../Hermod/README.md" height="100px" width="50%">
+				</li>
+			</ul>
+		</div>
 	</div>
 </body>
+</html>
