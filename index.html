@@ -4,6 +4,7 @@
 	<title>Pedram Namiranian</title>
 
 	<style type="text/css">
+
 	h2 {
 		margin-bottom: 0px;
 	}
@@ -34,10 +35,11 @@
 
 	/* Style the header: fixed position (always stay at the top) */
 	.header {
+		display: none;
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 1;
+		z-index: 2;
 		width: 160px;
 		height: 676px;
 		background-color: #f1f1f1;
@@ -73,39 +75,52 @@
 		text-align: center; 
 		margin-top: 8px;
 	}
+
+	.navLink {
+		float: left;
+		margin-top: 20%;
+		background-color: rgba(0, 100, 255, 0.3);
+		height: 100px;
+		width: 50px;
+		position: fixed;
+		font-size: 15px;
+		z-index: 1;
+		text-align: center;
+	}
 </style>
 
 </head>
-<body style="background-color: lightgrey;" onload="loadFunc();">
-	<div style="display:flex; align-items:center; width:160px;">
-		<div class="header" id="header">
-			<h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Page Navigation</h2>
-			<a style="background-color: #b0d7f4;" class="navIcon">
-				<h3>Wecome</h3>		
-			</a>
+<body style="background-color: lightgrey;">
+	<button class="navLink" id="navLink" onmouseover="menuFunc();">
+		<span style="display: inline-block; ">M<br>E<br>N<br>U</span>
+	</button>
+	<div class="header" id="header" onmouseleave="leaveMenuFunc();">
+		<h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Page Navigation</h2>
+		<a href="#" style="background-color: #b0d7f4;" class="navIcon">
+			<h3>Wecome</h3>		
+		</a>
 
-			<div style="background-color: #96bfdd; margin-top: 150px;" class="navIcon">
-				<h3>About Me</h3>		
-			</div>
+		<a href="#" style="background-color: #96bfdd; margin-top: 150px;" class="navIcon">
+			<h3>About Me</h3>		
+		</a>
 
-			<div style="background-color: #75add6; margin-top: 300px;" class="navIcon">
-				<h3>Projects</h3>		
-			</div>
+		<a href="#" style="background-color: #75add6; margin-top: 300px;" class="navIcon">
+			<h3>Projects</h3>		
+		</a>
 
-			<div style="background-color: #2b8ed8; margin-top: 450px;" class="navIcon">
-				<h3>Philosophy</h3>		
-			</div>
+		<a href="#" style="background-color: #2b8ed8; margin-top: 450px;" class="navIcon">
+			<h3>Philosophy</h3>		
+		</a>
 
-			<div class="progress-container">
-				<div class="progress-bar" id="myBar"></div>
-			</div> 
-		</div>
+		<div class="progress-container">
+			<div class="progress-bar" id="myBar"></div>
+		</div> 
 	</div>
+		<div style="background-color: blue; width: 100%; margin: 0px;">
+		<h1 style="margin:0px; top: 0; left: 0;">Welcome to my github page!</h1>
+		</div>
 
-	<div style="max-width: 1000px; margin-left: 15px;" class="content">
-		<h1>Welcome to my github page!</h1>
-
-		<div>
+		<div style="margin-left: 15px;">
 			<h2>About Me:</h2>
 			<p>I am currently a computer science major and a philosophy minor at the University of San Francisco. I am very passionate about computer science and love working on various projects and improving my skills. This github repository is a collection of various projects I have worked on and am currently working on. Some of these projects are class assignments and some are created by me just for my own benefit.</p>
 
@@ -125,21 +140,19 @@
 				</li>
 			</ul>
 		</div>
-	</div>
 
 	<script type="text/javascript">
 
 		// When the user scrolls the page, execute myFunction 
 		window.onscroll = function() {myFunction()};
 
-		function loadFunc() {
-			var winHeight = document.body.height;
-			var marg = (winHeight - 676)/2;
-			console.log(winHeight);
-			document.getElementById("header").style.margin = marg;
+		function menuFunc() {
+			document.getElementById("header").style.display = "inline-block";
 		}
 
-		window.onload = function() {loadFunc()};
+		function leaveMenuFunc() {
+			document.getElementById("header").style.display = "none";
+		}
 
 		function myFunction() {
 			var winHeight = document.body.height;
