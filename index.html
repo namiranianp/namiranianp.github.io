@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html>
 <head>
 	<title>Pedram Namiranian</title>
 
@@ -31,10 +31,78 @@
 		border: inset 2px; 
 		margin-top: 10px;
 	}
+
+	/* Style the header: fixed position (always stay at the top) */
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 160px;
+		height: 676px;
+		background-color: #f1f1f1;
+	}
+
+	/* The progress container (grey background) */
+	.progress-container {
+		height: 600px;
+		width: 10px;
+		background: #ccc;
+		float: right;
+		display: inline-block;
+	}
+
+	/* The progress bar (scroll indicator) */
+	.progress-bar {
+		height: 0%;
+		background: #4caf50;
+		width: 10px;
+		display: inline-block;
+	}
+
+	/* navigation icons for scroll menu */
+	.navIcon {
+		height: 150px; 
+		width: 150px; 
+		display: inline-block; 
+		position: fixed;
+	}
+
+	.navIcon h3 {
+		color: white; 
+		text-align: center; 
+		margin-top: 8px;
+	}
 </style>
+
 </head>
-<body style="background-color: lightgrey;">
-	<div style="max-width: 1000px; margin-left: 15px;">
+<body style="background-color: lightgrey;" onload="loadFunc();">
+	<div style="display:flex; align-items:center; width:160px;">
+		<div class="header" id="header">
+			<h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Page Navigation</h2>
+			<a style="background-color: #b0d7f4;" class="navIcon">
+				<h3>Wecome</h3>		
+			</a>
+
+			<div style="background-color: #96bfdd; margin-top: 150px;" class="navIcon">
+				<h3>About Me</h3>		
+			</div>
+
+			<div style="background-color: #75add6; margin-top: 300px;" class="navIcon">
+				<h3>Projects</h3>		
+			</div>
+
+			<div style="background-color: #2b8ed8; margin-top: 450px;" class="navIcon">
+				<h3>Philosophy</h3>		
+			</div>
+
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div> 
+		</div>
+	</div>
+
+	<div style="max-width: 1000px; margin-left: 15px;" class="content">
 		<h1>Welcome to my github page!</h1>
 
 		<div>
@@ -58,5 +126,28 @@
 			</ul>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+
+		// When the user scrolls the page, execute myFunction 
+		window.onscroll = function() {myFunction()};
+
+		function loadFunc() {
+			var winHeight = document.body.height;
+			var marg = (winHeight - 676)/2;
+			console.log(winHeight);
+			document.getElementById("header").style.margin = marg;
+		}
+
+		window.onload = function() {loadFunc()};
+
+		function myFunction() {
+			var winHeight = document.body.height;
+			var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+			var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+			var scrolled = (winScroll / height) * 100;
+			document.getElementById("myBar").style.height = scrolled + "%";
+		}
+	</script>
 </body>
 </html>
