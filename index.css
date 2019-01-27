@@ -4,7 +4,7 @@ h2 {
 
 p {
 	margin-top: 5px;
-	margin-left: 35px;
+	margin-left: 70px;
 }
 
 a {
@@ -81,7 +81,7 @@ li embed {
 
 .TOC {
 	border-collapse: collapse;
-	margin-left: 40px; 
+	margin-left: 35px; 
 	margin-top: 10px;
 	font-size: 17px;
 }
@@ -106,7 +106,7 @@ li embed {
 }
 
 .essayLink a {
-	margin-left: 25px;
+	margin-left: 35px;
 }
 
 .essayLink {
@@ -129,4 +129,8 @@ li embed {
 	border: none;
 	height: 20px;
 	width: 150px;
+}
+
+.projectList p {
+	margin-left: 35px;
 }
