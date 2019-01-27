@@ -124,3 +124,9 @@ li embed {
 	padding-left: 25px; 
 	margin-top: -10px;
 }
+
+.contact td {
+	border: none;
+	height: 20px;
+	width: 150px;
+}
