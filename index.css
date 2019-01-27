@@ -1,0 +1,125 @@
+h2 {
+	margin-bottom: 0px;
+}
+
+p {
+	margin-top: 5px;
+	margin-left: 35px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: blue;
+}
+
+li {
+	margin-top: 30px;
+}
+
+li embed {
+	overflow: auto; 
+	border: inset 2px; 
+	margin-top: 10px;
+}
+
+/* Style the header: fixed position (always stay at the top) */
+.header {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 150px;
+	height: 676px;
+	background-color: #f1f1f1;
+}
+
+/* navigation icons for scroll menu */
+.navIcon {
+	height: 150px; 
+	width: 150px; 
+	display: inline-block; 
+	position: fixed;
+}
+
+.navIcon h3 {
+	color: white; 
+	text-align: center; 
+	margin-top: 8px;
+}
+
+.navLink {
+	float: left;
+	margin-top: 20%;
+	background-color: rgba(0, 100, 255, 0.3);
+	height: 100px;
+	width: 50px;
+	position: fixed;
+	font-size: 15px;
+	z-index: 1;
+	text-align: center;
+}
+
+.title {
+	width: 100% + 8px; 
+	margin: -8px;
+	height: 75px;
+}
+
+.title h1 {
+	padding: 15px;
+}
+
+.title h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+.TOC {
+	border-collapse: collapse;
+	margin-left: 40px; 
+	margin-top: 10px;
+	font-size: 17px;
+}
+
+.TOC table, th, td {
+	border: 1px solid black;
+}
+
+.TOC td {
+	padding: 5px;
+	margin: 5px;
+}
+
+.resume {
+	display: inline-block;
+	margin-left: 35px;
+	float: left;
+}
+
+.education li {
+	margin: 5px;
+}
+
+.essayLink a {
+	margin-left: 25px;
+}
+
+.essayLink {
+	margin-top: -10px;
+}
+
+.workHist li {
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.workHist span {
+	font-size: 13px; 
+	padding-left: 25px; 
+	margin-top: -10px;
+}
