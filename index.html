@@ -255,6 +255,13 @@
 
 
 	<script type="text/javascript">
+			var winWidth = window.innerWidth;
+			if (winWidth < 1391) {
+				document.getElementById("myInfo").style.height = "2450px";
+			} else {
+				document.getElementById("myInfo").style.height = "1350px";
+			}
+
 		function setWindowHeight() {
 			var winWidth = window.innerWidth;
 			if (winWidth < 1391) {
